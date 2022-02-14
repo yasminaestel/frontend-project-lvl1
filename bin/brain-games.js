@@ -1,1 +1,1 @@
-concol.log("Welcome to the Brain Games!")
+concol.log("Welcome to the Brain Games!");
