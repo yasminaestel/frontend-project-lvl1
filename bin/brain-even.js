@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-import { username } from "../src/index-even.js";
-import { youAnswer } from "../src/index-even.js";
+import { username } from "../src/games/index-even.js";
+import { youAnswer } from "../src/games/index-even.js";
