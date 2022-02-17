@@ -5,12 +5,12 @@ export const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const getRandomNumber = () => Math.floor(Math.random() * 100);
-const gameEven = () => {
 let correctAnswerCounter = 0;
 const numberRandom = getRandomNumber();
-const youAnswer = readlineSync.question("You answer: ");
+export const youAnswer;
 for (i = 1; i <= 3; i += 1) {
   console.log(`Question:${numberRandom}`);
+youAnswer = readlineSync.question("You answer: ");
   if (numberRandom % 2 === 0 && youAnswer === "yes") {
     console.log("Correct!");
     correctAnswerCounter += 1;
@@ -45,8 +45,5 @@ for (i = 1; i <= 3; i += 1) {
 }
 if (correctAnswerCounter === 3) {
   console.log("Congratulations, ${ username }!");
-} 
-};
-
-export default gameEven;
+}
 
