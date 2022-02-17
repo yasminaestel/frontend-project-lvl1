@@ -6,7 +6,7 @@ export const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const gameEven = () => {
-  console.log(`Question:${getRandomNumber}`);
+  console.log("Question:" getRandomNumber);
   const youAnswer = readlineSync.question("You answer: ");
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
