@@ -1,49 +1,31 @@
+import getRandomNumber from "../common.js";
 import readlineSync from "readline-sync";
 
 console.log("Welcome to the Brain Games!");
-const username = readlineSync.question("May I have your name? ");
+export const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const getRandomNumber = () => Math.floor(Math.random() * 100);
-let correctAnswerCounter = 0;
-const numberRandom = getRandomNumber();
-for (i = 1; i <= 3; i += 1) {
-   console.log(`Question:${numberRandom}`);
-    const youAnswer = readlineSync.question("You answer: ");
-  if (numberRandom % 2 === 0 && youAnswer === "yes") {
-    console.log("Correct!");
-    correctAnswerCounter += 1;
-    console(youAnswer);
-  } else if (numberRandom % 2 !== 0 && youAnswer == "no") {
-    console.log("Correct!");
-    correctAnswerCounter += 1;
-    console(youAnswer);
-  } else if (numberRandom % 2 !== 0 && youAnswer === "yes") {
-    console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-    console.log("Let's try again, ${username}!");
-    break;
-  } else if (numberRandom % 2 === 0 && youAnswer === "no") {
-    console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-    console.log("Let's try again, ${username}!");
-    break;
-  } else {
-    if (numberRandom % 2 === 0) {
-      console.log(
-        "'${youAnswer}' is wrong answer ;(. Correct answer was 'yes'."
-      );
-      console.log("Let's try again, ${username}!");
-      break;
-    } else {
-      console.log(
-        "'${youAnswer}' is wrong answer ;(. Correct answer was 'no'."
-      );
-      console.log("Let's try again, ${username}!");
-      break;
-    }
+const gameEven = () => {
+  console.log(`Question:${getRandomNumber}`);
+  const youAnswer = readlineSync.question("You answer: ");
+  let attemptCounter = 0;
+  for (let i = 1; i <= 3; i += 1) {
+    if ((getRandomNumber % 2 === 0 && youAnswer === "yes") || (getRandomNumber % 2 !== 0 && youAnswer === "no")) {
+      console.log("Correct!");
+      return attemptCounter += 1;
+    } if (getRandomNumber % 2 !== 0 && youAnswer !== "no") {
+        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
+        console.log(`Let's try again, ${username}!`);
+        return;
+    } if (numberRandom % 2 === 0 && youAnswer !== "yes") {
+        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'yes'.`);
+        console.log(`Let's try again, ${username}!`);
+        return;
   }
 }
-if (correctAnswerCounter === 3) {
-  console.log("Congratulations, ${ username }!");
-};
-export const username;
-  export const youAnswer;
+if (attemptCounter === 3) {
+    console.log(`Congratulations, ${ username }!`);
+    }
+}
+
+export default gameEven;
