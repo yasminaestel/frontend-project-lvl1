@@ -7,10 +7,10 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const getRandomNumber = () => Math.floor(Math.random() * 100);
 let correctAnswerCounter = 0;
 const numberRandom = getRandomNumber();
-export const youAnswer;
+export const youAnswer = readlineSync.question("You answer: ");
 for (i = 1; i <= 3; i += 1) {
   console.log(`Question:${numberRandom}`);
-youAnswer = readlineSync.question("You answer: ");
+consol.log(`${ youAnswer }`);
   if (numberRandom % 2 === 0 && youAnswer === "yes") {
     console.log("Correct!");
     correctAnswerCounter += 1;
