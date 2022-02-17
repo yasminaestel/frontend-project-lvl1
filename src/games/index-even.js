@@ -7,9 +7,9 @@ import readlineSync from "readline-sync";
     const getRandomNumber = () => Math.floor(Math.random() * 100);
     let correctAnswerCounter = 0;
     const numberRandom = getRandomNumber();
-    console.log('Question: ${numberRandom}');
     export const youAnswer = readlineSync.question('You answer: ');
-    for (i = 1; i <= 3; i += 1) {    
+    for (i = 1; i <= 3; i += 1) {
+	console.log('Question:' numberRandom);
         if (numberRandom % 2 === 0 && youAnswer === 'yes') {
             console.log('Correct!');
             correctAnswerCounter += 1;
