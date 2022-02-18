@@ -1,6 +1,6 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
-inport getRandomOperation from "../getRandomOperation.js";
+import getRandomOperation from "../getRandomOperation.js";
 
 
   console.log("Welcome to the Brain Games!");
