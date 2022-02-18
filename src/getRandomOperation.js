@@ -8,4 +8,4 @@ const getRandomOperator = () => {
     return '*';
   }
 };
-export defaukt getRandomOperator;
+export default getRandomOperator;
