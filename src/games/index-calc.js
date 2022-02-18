@@ -21,7 +21,7 @@ import getRandomOperation from "../getRandomOperation.js";
       console.log("Correct!");
       attemptCounter += 1;
     } else {
-      console.log(`'${youAnswer}' is wrong answer \;\(. Correct answer was numberAnswer.`);
+      console.log(`'${youAnswer}' is wrong answer \;\(. Correct answer was ${numberAnswer}.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
