@@ -1,6 +1,6 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
-import {startGames} from "../index.js";
+import startGames from "../index.js";
 
 startGames();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
