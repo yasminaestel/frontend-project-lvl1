@@ -12,8 +12,9 @@ import getRandomOperation from "../getRandomOperation.js";
     for (let i = 1; i <= 3; i += 1) {
       const a = getRandomNumber();
       const b = getRandomNumber();
-    const number = `${a}` getRandomOperation() `${b}`;
-    const numberAnswer = a getRandomOperation() b;
+      const operations = getRandomOperation();
+    const number = `${a} ${operations} ${b}`;
+    const numberAnswer = a + operations + b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
