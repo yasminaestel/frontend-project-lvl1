@@ -11,7 +11,7 @@ import readlineSync from "readline-sync";
     for (let i = 1; i <= 3; i += 1) {
       const a = getRandomNumber();
       const b = getRandomNumber();
-    const number = "a +"+" b";
+    const number = `${a + b}`;
     const numberResult = a + b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
