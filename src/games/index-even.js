@@ -1,6 +1,7 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
 import {startGames} from "../index.js";
+import {username} from "../index.js";
 
 startGames();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -15,16 +16,16 @@ const gameEven = () => {
       attemptCounter += 1;
     } if (number % 2 !== 0 && youAnswer !== "no") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
-        console.log(`Let's try again, ${myName}!`);
+        console.log(`Let's try again, ${username}!`);
         return;
     } if (number % 2 === 0 && youAnswer !== "yes") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'yes'.`);
-        console.log(`Let's try again, ${myName}!`);
+        console.log(`Let's try again, ${username}!`);
         return;
   }
 }
 if (attemptCounter === 3) {
-    console.log(`Congratulations, ${ myName }!`);
+    console.log(`Congratulations, ${ username }!`);
     }
 }
 
