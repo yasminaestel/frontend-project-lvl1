@@ -7,10 +7,10 @@ console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const number = getRandomNumber();
 const gameEven = () => {
-  console.log("Question:" + number);
-  const youAnswer = readlineSync.question("You answer: ");
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
+    console.log("Question:" + number);
+  const youAnswer = readlineSync.question("You answer: ");
     if ((number % 2 === 0 && youAnswer === "yes") || (number % 2 !== 0 && youAnswer === "no")) {
       console.log("Correct!");
       attemptCounter += 1;
