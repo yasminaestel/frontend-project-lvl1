@@ -15,16 +15,16 @@ const gameEven = () => {
       attemptCounter += 1;
     } if (number % 2 !== 0 && youAnswer !== "no") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
-        console.log(`Let's try again, ${username}!`);
+        console.log(`Let's try again, ${myName}!`);
         return;
     } if (number % 2 === 0 && youAnswer !== "yes") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'yes'.`);
-        console.log(`Let's try again, ${username}!`);
+        console.log(`Let's try again, ${myName}!`);
         return;
   }
 }
 if (attemptCounter === 3) {
-    console.log(`Congratulations, ${ username }!`);
+    console.log(`Congratulations, ${ myName }!`);
     }
 }
 
