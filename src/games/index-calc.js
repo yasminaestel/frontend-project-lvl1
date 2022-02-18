@@ -12,14 +12,13 @@ import readlineSync from "readline-sync";
       const a = getRandomNumber();
       const b = getRandomNumber();
     const number = `${a} + ${b}`;
-    const numberResult = a + b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
-    if (numberResult === youAnswer) {
+    if (youAnswer === (a + b)) {
       console.log("Correct!");
       attemptCounter += 1;
     } else {
-      console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was '${numberResult}'.`);
+      console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was '${a + b}'.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
