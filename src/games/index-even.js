@@ -13,7 +13,7 @@ const gameEven = () => {
   for (let i = 1; i <= 3; i += 1) {
     if ((number % 2 === 0 && youAnswer === "yes") || (number % 2 !== 0 && youAnswer === "no")) {
       console.log("Correct!");
-      return attemptCounter += 1;
+      attemptCounter += 1;
     } if (number % 2 !== 0 && youAnswer !== "no") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
         console.log(`Let's try again, ${username}!`);
