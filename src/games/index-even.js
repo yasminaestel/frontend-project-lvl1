@@ -5,19 +5,20 @@ console.log("Welcome to the Brain Games!");
 export const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const number = getRandomNumber();
 const gameEven = () => {
-  console.log("Question:" + getRandomNumber);
+  console.log("Question:" + number);
   const youAnswer = readlineSync.question("You answer: ");
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
-    if ((getRandomNumber % 2 === 0 && youAnswer === "yes") || (getRandomNumber % 2 !== 0 && youAnswer === "no")) {
+    if ((number % 2 === 0 && youAnswer === "yes") || (number % 2 !== 0 && youAnswer === "no")) {
       console.log("Correct!");
       return attemptCounter += 1;
-    } if (getRandomNumber % 2 !== 0 && youAnswer !== "no") {
+    } if (number % 2 !== 0 && youAnswer !== "no") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
         console.log(`Let's try again, ${username}!`);
         return;
-    } if (numberRandom % 2 === 0 && youAnswer !== "yes") {
+    } if (number % 2 === 0 && youAnswer !== "yes") {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was 'yes'.`);
         console.log(`Let's try again, ${username}!`);
         return;
