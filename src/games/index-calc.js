@@ -14,7 +14,8 @@ import getRandomOperation from "../getRandomOperation.js";
       const b = getRandomNumber();
       const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
-    const numberAnswer = a + `${operations}` + b;
+    const numberAnswerLink = a + `${operations}` + b;
+    const numberAnswer = numberAnswerLink;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
