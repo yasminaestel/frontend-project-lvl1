@@ -9,8 +9,10 @@ import readlineSync from "readline-sync";
   const gameCalc = () => {
     let attemptCounter = 0;
     for (let i = 1; i <= 3; i += 1) {
-    const number = `${getRandomNumber()} + ${getRandomNumber()}`;
-    const numberResult = getRandomNumber() + getRandomNumber();
+      const a = getRandomNumber();
+      const b = getRandomNumber();
+    const number = "a +"+" b";
+    const numberResult = a + b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (numberResult === youAnswer) {
