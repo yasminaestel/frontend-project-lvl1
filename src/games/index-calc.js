@@ -26,3 +26,4 @@ import readlineSync from "readline-sync";
     console.log(`Congratulations, ${ username }!`);
     }
   }
+export default gameCalc;
