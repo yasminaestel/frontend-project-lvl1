@@ -1,10 +1,12 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
-import startGames from "../index.js";
 
-startGames();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const gameEven = () => {
+
+  console.log("Welcome to the Brain Games!");
+  const username = readlineSync.question("May I have your name? ");
+  console.log(`Hello, ${username}!`);}
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const gameEven = () => {
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
