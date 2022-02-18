@@ -1,5 +1,6 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
+inport getRandomOperation from "../getRandomOperation.js";
 
 
   console.log("Welcome to the Brain Games!");
@@ -11,14 +12,15 @@ import readlineSync from "readline-sync";
     for (let i = 1; i <= 3; i += 1) {
       const a = getRandomNumber();
       const b = getRandomNumber();
-    const number = `${a} + ${b}`;
+    const number = `${a}` getRandomOperation() `${b}`;
+    const numberAnswer = a getRandomOperation() b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
-    if (youAnswer === `${a + b}`) {
+    if (youAnswer === `${numberAnswer}`) {
       console.log("Correct!");
       attemptCounter += 1;
     } else {
-      console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was '${a + b}'.`);
+      console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was '${numberAnswer}'.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
