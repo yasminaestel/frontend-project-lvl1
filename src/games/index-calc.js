@@ -14,7 +14,7 @@ import readlineSync from "readline-sync";
     const number = `${a} + ${b}`;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
-    if (youAnswer === (a + b)) {
+    if (youAnswer === `${a + b}`) {
       console.log("Correct!");
       attemptCounter += 1;
     } else {
