@@ -14,7 +14,7 @@ import getRandomOperation from "../getRandomOperation.js";
       const b = getRandomNumber();
       const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
-      const numberAnswer = 0;
+      let numberAnswer = 0;
       switch (operations) {
         case '+':
           numberAnswer = a + b;
