@@ -12,7 +12,7 @@ import getRandomOperation from "../getRandomOperation.js";
     for (let i = 1; i <= 3; i += 1) {
       const a = getRandomNumber();
       const b = getRandomNumber();
-      a = Number (a);
+      a = Number(a);
       b = Number(b);
       const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
