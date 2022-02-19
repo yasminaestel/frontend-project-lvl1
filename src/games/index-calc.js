@@ -14,13 +14,14 @@ import getRandomOperation from "../getRandomOperation.js";
       const b = getRandomNumber();
       const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
+      const numberAnswer;
       switch (operations) {
         case '+':
-          const numberAnswer = a + b;
+          numberAnswer = a + b;
         case '-':
-          const numberAnswer = a - b;
+          numberAnswer = a - b;
        case '*':
-          const numberAnswer = a * b;
+          numberAnswer = a * b;
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
