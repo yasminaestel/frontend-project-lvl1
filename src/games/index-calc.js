@@ -18,13 +18,13 @@ import getRandomOperation from "../getRandomOperation.js";
       switch (operations) {
         case '+':
           numberAnswer = a + b;
-          [break;]
+          break;
         case '-':
           numberAnswer = a - b;
-          [break;]
+          break;
        case '*':
           numberAnswer = a * b;
-          [break;]
+          break;
       }
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
