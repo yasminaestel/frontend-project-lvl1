@@ -17,13 +17,13 @@ import getRandomOperation from "../getRandomOperation.js";
       switch (operations) {
         case '+':
           const numberAnswer = a + b;
-          [break];
+          [break;]
         case '-':
           const numberAnswer = a - b;
-          [break];
+          [break;]
        case '*':
           const numberAnswer = a * b;
-          [break];
+          [break;]
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
