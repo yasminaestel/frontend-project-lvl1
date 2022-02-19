@@ -12,7 +12,7 @@ import getRandomOperation from "../getRandomOperation.js";
     for (let i = 1; i <= 3; i += 1) {
       const a = Number(getRandomNumber());
       const b = Number (getRandomNumber());
-      const operations = getRandomOperation();
+      const operations = Number(getRandomOperation());
     const number = `${a} ${operations} ${b}`;
     const numberAnswerLink = a + `${operations}` + b;
     const numberAnswer = Math.floor(numberAnswerLink);
