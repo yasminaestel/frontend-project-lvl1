@@ -21,7 +21,7 @@ import getRandomOperation from "../getRandomOperation.js";
         case '-':
           numberAnswer = a - b;
        case '*':
-          numberAnswer = a * b;
+          numberAnswer = a * b; }
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
