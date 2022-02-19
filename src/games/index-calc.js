@@ -10,11 +10,20 @@ import getRandomOperation from "../getRandomOperation.js";
   const gameCalc = () => {
     let attemptCounter = 0;
     for (let i = 1; i <= 3; i += 1) {
-      const a = Number(getRandomNumber());
-      const b = Number (getRandomNumber());
+      const a = getRandomNumber();
+      const b = getRandomNumber();
       const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
-    const numberAnswer = a + `${operations}` + b;
+      switch (operations) {
+        case '+':
+          const numberAnswer = a + b;
+          [break};
+        case '-':
+          const numberAnswer = a - b;
+          [break};
+       case '*':
+          const numberAnswer = a * b;
+          [break};
     console.log("Question:" + number);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
