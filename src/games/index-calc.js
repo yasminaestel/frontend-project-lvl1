@@ -1,20 +1,18 @@
 import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
 import getRandomOperation from "../getRandomOperation.js";
+import startGames from "../startGames.js";
+import { const username } from "../startGames.js";
 
-
-  console.log("Welcome to the Brain Games!");
-  const username = readlineSync.question("May I have your name? ");
-  console.log(`Hello, ${username}!`);
-  console.log('What is the result of the expression?');
-  const gameCalc = () => {
-    let attemptCounter = 0;
-    for (let i = 1; i <= 3; i += 1) {
-      const a = getRandomNumber();
-      const b = getRandomNumber();
-      const operations = getRandomOperation();
+startGames ();
+const gameCalc = () => {
+let attemptCounter = 0;
+  for (let i = 1; i <= 3; i += 1) {
+    const a = getRandomNumber();
+    const b = getRandomNumber();
+    const operations = getRandomOperation();
     const number = `${a} ${operations} ${b}`;
-      let numberAnswer = 0;
+    let numberAnswer;
       switch (operations) {
         case '+':
           numberAnswer = a + b;
