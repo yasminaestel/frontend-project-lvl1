@@ -27,11 +27,11 @@ let attemptCounter = 0;
         console.log(`Question: ${number1} ${number2}` );
         const youAnswer = readlineSync.question("You answer: ");
         nod (number1, number2);
-    if (youAnswer === `${number1}`) {
+    if (youAnswer === `${gcd}`) {
         console.log("Correct!");
         return attemptCounter += 1;
     } else {
-        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was ${number1}.`);
+        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was ${gcd}.`);
         console.log(`Let's try again, ${username}!`);
         return;
     }
