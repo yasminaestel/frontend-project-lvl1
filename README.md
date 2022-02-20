@@ -5,3 +5,4 @@
 ![yasminaestel](https://github.com/yasminaestel/frontend-project-lvl1/actions/workflows/frontend-project-lvl1.yml/badge.svg)
 [![asciicast](https://asciinema.org/a/EEjqjTfnoXbzFKIh2GapdRyFb.svg)](https://asciinema.org/a/EEjqjTfnoXbzFKIh2GapdRyFb)
 [![asciicast](https://asciinema.org/a/pGLbpbDVaks1lPVnoGUZxYRNn.svg)](https://asciinema.org/a/pGLbpbDVaks1lPVnoGUZxYRNn)
+[![asciicast](https://asciinema.org/a/GJep8hkdZJ63I32cAPwBtp9m4.svg)](https://asciinema.org/a/GJep8hkdZJ63I32cAPwBtp9m4)
