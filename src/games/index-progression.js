@@ -16,7 +16,7 @@ const gameProgression = () => {
     let arrayLength = randomLength();
     let massiveRandom = [];
     massiveRandom[0] = massiveRandom.push(firstIndex);
-    for (let index = 1; index <= arrayLength; index++) {
+    for (let index = 1, index <= arrayLength, index++) {
        let newNumber = massiveRandom[index - 1] + difference;
         massiveRandom[index] = massiveRandom.push(newNumber);
     }
@@ -26,6 +26,7 @@ const gameProgression = () => {
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${answerRight}`) {
       console.log("Correct!");
+      attemptCounter += 1;
     } else {
       console.log(
         `'${youAnswer}' is wrong answer ;(. Correct answer was ${answerRight}.`
