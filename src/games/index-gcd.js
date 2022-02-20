@@ -7,17 +7,17 @@ const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Find the greatest common divisor of given numbers.');
 const nod = (number1, number2) => {
-    let number3;
-    while (number1 != number2) {
-        if (number1 > number2) {
-            number1 = number1 - number2;
-        } else
-        if (number1 < number2) {
-            number3 = number1;
-            number1 = number2;
-            number2 = number3;}
-        }
-        return number1;
+   let gcd;
+    while (number1 !== number2) {
+  if (number1 > number2) {
+    number1 = number1 - number2;
+  }
+  else {
+    number2 = number2 - number1;
+  }
+}
+gcd = number1;
+return gcd;
     }
 const gameGcd = () => {
 let attemptCounter = 0;
