@@ -16,19 +16,18 @@ const gameProgression = () => {
     let arrayLength = randomLength();
     let massiveRandom = [];
     massiveRandom[0] = firstIndex;
-    for (let i = 1; i <= arrayLength; i++) {
-      massiveRandom[i] = massiveRandom[i - 1] + difference;
-    }
+        for (let index = 1; index <= arrayLength; index++) {
+            massiveRandom[index] = massiveRandom[index - 1] + difference;
+            }
     let number = randomDiff();
     let newMassiveRandom = massiveRandom.splice(number, 1, "...");
     console.log(`Question: ${newMassiveRandom}`);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `massiveRandom[number]`) {
       console.log("Correct!");
-      return (attemptCounter += 1);
     } else {
       console.log(
-        `'${youAnswer}' is wrong answer ;(. Correct answer was ${number}.`
+        `'${youAnswer}' is wrong answer ;(. Correct answer was ${massiveRandom[number]}.`
       );
       console.log(`Let's try again, ${username}!`);
       return;
