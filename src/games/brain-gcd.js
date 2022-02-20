@@ -18,7 +18,9 @@ const nod = (number1, number2) => {
             number1 = number2;
             number2 = number3;}
         }
-        return number1;}
+        return number1;
+    }
+}
 const gameGcd = () => {
     for (let i = 1; i <= 3; i += 1) {
         const number1 = getRandomNumber();
