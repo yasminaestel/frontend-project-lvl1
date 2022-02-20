@@ -4,6 +4,9 @@ import getRandomOperation from "../getRandomOperation.js";
 import startGames from "../startGames.js";
 
 startGames ();
+const username = readlineSync.question("May I have your name? ");
+console.log(`Hello, ${username}!`);
+console.log('What is the result of the expression?');
 const gameCalc = () => {
 let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
