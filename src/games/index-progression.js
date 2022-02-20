@@ -15,11 +15,14 @@ const gameProgression = () => {
     let difference = randomDiff();
     let arrayLength = randomLength();
     let lineMassive = [];
-    lineMassive = lineMassive.push(firstIndex)
+    lineMassive = lineMassive.push(firstIndex);
+    q = lineMassive;
     for (let index = 1; index < arrayLength; index += 1) {
     let intermediateVariable = lineMassive[index-1] + difference;
-	lineMassive.push(intermediateVariable);
-         }
+    let q = q.push(intermediateVariable);
+    
+    }
+    lineMassive = q;
     let number = difference;
     let answerRight = lineMassive[number];
     let lineQuestion = lineMassive.splice(number, 1, "..");
