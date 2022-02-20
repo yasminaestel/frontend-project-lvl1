@@ -13,7 +13,7 @@ let attemptCounter = 0;
         console.log(`Question: ${number1} ${number2}` );
         const youAnswer = readlineSync.question("You answer: ");
         const gameGcd = () => {
-            const nod (number1, number2) => {
+            const nod =  (number1, number2) => {
                 let number3;
                 while (number1 != number2) {
                     if (number1 > number2) {
