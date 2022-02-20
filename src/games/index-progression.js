@@ -18,7 +18,8 @@ const gameProgression = () => {
     line = lineMassive.push(firstIndex)
     for (let index = 1; index < arrayLength; index += 1) {
     let intermediateVariable = lineMassive[index-1] + difference;
-    lineMassive = lineMassive.push(intermediateVariable);
+    let q = lineMassive.push(intermediateVariable);
+      lineMassive = q;
     }
     let number = difference;
     let answerRight = lineMassive[number];
