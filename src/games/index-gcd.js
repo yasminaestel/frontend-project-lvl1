@@ -36,8 +36,9 @@ let attemptCounter = 0;
         return;
     }
 }
-}
+
 if (attemptCounter === 3) {
     console.log(`Congratulations, ${ username }!`);
     }
+}
 export default gameGcd;
