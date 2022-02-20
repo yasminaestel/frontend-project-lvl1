@@ -42,3 +42,4 @@ const gameGcd = () => {
 if (attemptCounter === 3) {
     console.log(`Congratulations, ${ username }!`);
     }
+export defolt gameGcd;
