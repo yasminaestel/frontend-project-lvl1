@@ -16,8 +16,7 @@ const gameProgression = () => {
     let arrayLength = randomLength();
     let lineMassive = [];
     lineMassive = lineMassive.push(firstIndex)
-    let intermediateVariable = lineMassive[index-1] + difference;
-    lineMassive = lineMassive.push(3);
+     lineMassive = lineMassive.push(3);
     let number = difference;
     let answerRight = lineMassive[number];
     let lineQuestion = lineMassive.splice(number, 1, "..");
