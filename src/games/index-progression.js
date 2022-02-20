@@ -6,14 +6,14 @@ startGames();
 const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log("What number is missing in the progression?");
+const gameGcd = () => {
 let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
         let firstIndex = getRandomNumber();
         let difference = getRandomNumber();
         let arrayLength = getRandomNumber();
-        const random = (firstIndex, difference, arrayLength) => {
-            let massiveRandom = [];
-            massiveRandom[0] = firstIndex;
+        let massiveRandom = [];
+        massiveRandom[0] = firstIndex;
             for (let i = 1; i <= arrayLength; i++) {
                 massiveRandom[i] = massiveRandom[i - 1] + difference;
             }
