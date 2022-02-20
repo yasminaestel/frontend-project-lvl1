@@ -26,7 +26,7 @@ let newMassiveRandom = massiveRandom.splice(number, 1, '...');
         return (attemptCounter += 1);
       } else {
         console.log(
-          `'${youAnswer}' is wrong answer ;(. Correct answer was ${num}.`
+          `'${youAnswer}' is wrong answer ;(. Correct answer was ${number}.`
         );
         console.log(`Let's try again, ${username}!`);
         return;
