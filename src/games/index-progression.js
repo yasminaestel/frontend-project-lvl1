@@ -15,10 +15,11 @@ const gameProgression = () => {
     let difference = randomDiff();
     let arrayLength = randomLength();
     let massiveRandom = [];
-    massiveRandom[0] = firstIndex;
-        for (let index = 1; index <= arrayLength; index++) {
-            massiveRandom[index] = massiveRandom.push(massiveRandom[index - 1] + difference);
-            }
+    massiveRandom[0] = massiveRandom.push(firstIndex);
+    for (let index = 1; index <= arrayLength; index++) {
+       let newNumber = massiveRandom[index - 1] + difference;
+        massiveRandom[index] = massiveRandom.push(newNumber);
+    }
     let number = randomDiff();
     let answerRight = massiveRandom[number];
     console.log(`Question: ${massiveRandom.splice(number, 1, "...")}`);
