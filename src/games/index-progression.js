@@ -12,7 +12,7 @@ const gameProgression = () => {
         let firstIndex = getRandomNumber();
         let difference = getRandomNumber();
         let arrayLength = getRandomNumber();
-        const random (firstIndex, difference, arrayLength) {
+        const random = (firstIndex, difference, arrayLength) {
             let massiveRandom = [];
             massiveRandom[0] = firstIndex;
             for (let i = 1; i <= arrayLength; i++) {
