@@ -6,4 +6,4 @@ console.log("Welcome to the Brain Games!");
 }
 
 export default startGames;
-export { username };
+export { const username = readlineSync.question("May I have your name? ") };
