@@ -20,14 +20,14 @@ const gameProgression = () => {
             massiveRandom[index] = massiveRandom[index - 1] + difference;
             }
     let number = randomDiff();
-    let newMassiveRandom = massiveRandom.splice(number, 1, "...");
-    console.log(`Question: ${newMassiveRandom}`);
+    let answerRight = massiveRandom[number];
+    console.log(`Question: ${massiveRandom.splice(number, 1, "...")}`);
     const youAnswer = readlineSync.question("You answer: ");
-    if (youAnswer === `massiveRandom[number]`) {
+    if (youAnswer === `${answerRight}`) {
       console.log("Correct!");
     } else {
       console.log(
-        `'${youAnswer}' is wrong answer ;(. Correct answer was ${massiveRandom[number]}.`
+        `'${youAnswer}' is wrong answer ;(. Correct answer was ${answerRight}.`
       );
       console.log(`Let's try again, ${username}!`);
       return;
