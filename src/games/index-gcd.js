@@ -29,7 +29,7 @@ let attemptCounter = 0;
         nod (number1, number2);
     if (youAnswer === `${number1}`) {
         console.log("Correct!");
-        attemptCounter += 1;
+        return attemptCounter += 1;
     } else {
         console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was ${number1}.`);
         console.log(`Let's try again, ${username}!`);
