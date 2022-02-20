@@ -17,11 +17,11 @@ let attemptCounter = 0;
             for (let i = 1; i <= arrayLength; i++) {
                 massiveRandom[i] = massiveRandom[i - 1] + difference;
             }
-    const num = getRandomNumber();      
-    let newMassiveRandom = massiveRandom.splice(num, 1, '...');
+let number = getRandomNumber(); 
+let newMassiveRandom = massiveRandom.splice(number, 1, '...');
 	console.log(`Question: ${newMassiveRandom}`);
    const youAnswer = readlineSync.question("You answer: ");
-    if (youAnswer === `${num}`) {
+    if (youAnswer === `massiveRandom[number]`) {
         console.log("Correct!");
         return (attemptCounter += 1);
       } else {
