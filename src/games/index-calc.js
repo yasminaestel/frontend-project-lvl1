@@ -2,7 +2,7 @@ import getRandomNumber from "../getRandomNumber.js";
 import readlineSync from "readline-sync";
 import getRandomOperation from "../getRandomOperation.js";
 import startGames from "../startGames.js";
-import { const username } from "../startGames.js";
+import { username } from "../startGames.js";
 
 startGames ();
 const gameCalc = () => {
