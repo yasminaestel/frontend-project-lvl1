@@ -37,3 +37,4 @@ const gameProgression = () => {
     console.log(`Congratulations, ${username}!`);
       }
     };
+export default gameProgression;
