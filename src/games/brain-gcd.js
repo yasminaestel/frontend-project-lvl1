@@ -20,7 +20,6 @@ const nod = (number1, number2) => {
         }
         return number1;
     }
-}
 const gameGcd = () => {
     for (let i = 1; i <= 3; i += 1) {
         const number1 = getRandomNumber();
