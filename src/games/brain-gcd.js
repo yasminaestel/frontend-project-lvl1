@@ -36,6 +36,7 @@ const gameGcd = () => {
         return;
     }
 }
+}
 if (attemptCounter === 3) {
     console.log(`Congratulations, ${ username }!`);
     }
