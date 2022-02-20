@@ -19,7 +19,7 @@ let attemptCounter = 0;
             }
     const num = getRandomNumber();      
     let newMassiveRandom = massiveRandom.splice(num, 1, '...');
-	console.log(`Question: ${newMassiveRandom});
+	console.log(`Question: ${newMassiveRandom}`);
    const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${num}`) {
         console.log("Correct!");
