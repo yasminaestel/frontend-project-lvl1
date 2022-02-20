@@ -16,7 +16,7 @@ const gameProgression = () => {
     let arrayLength = randomLength();
     let lineMassive = [];
     lineMassive = lineMassive.push(firstIndex);
-    q = lineMassive;
+    let q = lineMassive;
     for (let index = 1; index < arrayLength; index += 1) {
     let intermediateVariable = lineMassive[index-1] + difference;
     let q = q.push(intermediateVariable);
