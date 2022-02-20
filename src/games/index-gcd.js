@@ -24,7 +24,7 @@ const gameGcd = () => {
     gcd = number1;
     if (youAnswer === `${gcd}`) {
       console.log("Correct!");
-      return (attemptCounter += 1);
+      attemptCounter += 1;
     } else {
       console.log(
         `'${youAnswer}' is wrong answer ;(. Correct answer was ${gcd}.`
