@@ -31,7 +31,7 @@ const gameGcd = () => {
         console.log("Correct!");
         attemptCounter += 1;
     } else {
-        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was ${numberAnswer}.`);
+        console.log(`'${youAnswer}' is wrong answer ;(. Correct answer was ${number1}.`);
         console.log(`Let's try again, ${username}!`);
         return;
     }
