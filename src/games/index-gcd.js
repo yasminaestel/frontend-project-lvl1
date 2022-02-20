@@ -26,6 +26,7 @@ let attemptCounter = 0;
 gcd = number1;
 return gcd;
     }
+        nod ();
     if (youAnswer === `${gcd}`) {
         console.log("Correct!");
         return attemptCounter += 1;
