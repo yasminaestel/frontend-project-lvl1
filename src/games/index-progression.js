@@ -18,6 +18,7 @@ const gameProgression = () => {
             for (let i = 1; i <= arrayLength; i++) {
                 massiveRandom[i] = massiveRandom[i - 1] + difference;
             }
+		return massiveRandom;
           }
     const num = getRandomNumber();      
     let newMassiveRandom = massiveRandom.splice(num, 1, '...');
