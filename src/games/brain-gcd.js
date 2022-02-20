@@ -7,12 +7,12 @@ const username = readlineSync.question("May I have your name? ");
 console.log(`Hello, ${username}!`);
 console.log('Find the greatest common divisor of given numbers.');
 let attemptCounter = 0;
+const gameGcd = () => {
     for (let i = 1; i <= 3; i += 1) {
         const number1 = getRandomNumber();
         const number2 = getRandomNumber();
         console.log(`Question: ${number1} ${number2}` );
         const youAnswer = readlineSync.question("You answer: ");
-        const gameGcd = () => {
             const nod =  (number1, number2) => {
                 let number3;
                 while (number1 != number2) {
