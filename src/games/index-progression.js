@@ -17,7 +17,7 @@ const gameProgression = () => {
     let massiveRandom = [];
     massiveRandom = massiveRandom.push(firstIndex);
     for (let index = 1; index <= arrayLength; index++) {
-      number2 = massiveRandom[index - 1] + difference;
+      let number2 = massiveRandom[index - 1] + difference;
         let q = massiveRandom.push(number2);
     }
     let number = randomDiff();
