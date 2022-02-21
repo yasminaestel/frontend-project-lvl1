@@ -19,14 +19,15 @@ const gameProgression = () => {
       const intermediateVariable = lineMassive[index - 1] + difference;
       lineMassive.push(intermediateVariable);
     }
-    const number = difference;
+    let number = difference;
     let answerRight;
     if (number < lineMassive.length) {
       answerRight = lineMassive[number];
       lineMassive.splice(number, 1, '..');
     } else {
-      answerRight = lineMassive[4];
-      lineMassive.splice(4, 1, '..');
+      number = number - 5;
+      answerRight = lineMassive[number];
+      lineMassive.splice(number, 1, '..');
     }
     const str = lineMassive.join(' ');
     console.log(`Question: ${str}`);
