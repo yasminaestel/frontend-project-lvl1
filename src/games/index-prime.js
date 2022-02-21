@@ -14,17 +14,17 @@ const gamePrime = () => {
     let correctAnswer;
    const isPrime = (number) =>{
  if (number < 2) {
-      correctAnswer = "no";
+    return correctAnswer = "no";
     }
     if (number === 2) {
-        correctAnswer = "yes"; 
+    return correctAnswer = "yes"; 
     }
     for (let i = 2; i <= number / 2; i += 1) {
         if (number % i === 0) {
-            correctAnswer = "no";
+           return correctAnswer = "no";
         }
     }
- correctAnswer = "yes";}
+ return correctAnswer = "yes";}
 isPrime(number);
  const yourAnswer = readlineSync.question("You answer: ");
   if (yourAnswer === correctAnswer) {
