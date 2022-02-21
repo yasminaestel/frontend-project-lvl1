@@ -10,7 +10,7 @@ import readlineSync from "readline-sync";
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
-    console.log("Question:" + number);
+    console.log(`Question: ${number}`);
   const youAnswer = readlineSync.question("You answer: ");
     if ((number % 2 === 0 && youAnswer === "yes") || (number % 2 !== 0 && youAnswer === "no")) {
       console.log("Correct!");
