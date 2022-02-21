@@ -17,12 +17,12 @@ const gameProgression = () => {
     let lineMassive = [firstIndex];
     for (let index = 1; index < arrayLength; index += 1) {
     let intermediateVariable = lineMassive[index-1] + difference;
-    lineMassive = lineMassive.push(intermediateVariable);
+    lineMassive.push( intermediateVariable );}
     let number = difference;
     let answerRight = lineMassive[number];
-    let lineQuestion = lineMassive.splice(number, 1, "..");
-    let line = lineQuestion.join();
-    console.log("Question: " + line);
+    lineMassive.splice(number, 1, "..");
+    lineMassive.join();
+    console.log("Question: " + lineMassive);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${answerRight}`) {
       console.log("Correct!");
