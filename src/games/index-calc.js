@@ -1,9 +1,12 @@
 import getRandomNumber from '../getRandomNumber.js';
+
 import readlineSync from 'readline-sync';
+
 import getRandomOperation from '../getRandomOperation.js';
+
 import startGames from '../startGames.js';
 
-startGames ();
+startGames();
 const username = readlineSync.question('May I have your name?');
 console.log(`Hello, ${username}!`);
 console.log('What is the result of the expression?');
