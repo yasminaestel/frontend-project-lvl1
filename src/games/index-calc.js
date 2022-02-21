@@ -25,7 +25,7 @@ let attemptCounter = 0;
           numberAnswer = a * b;
           break;
       }
-    console.log(`Question: a ${operations} b`);
+    console.log(`Question: ${a} ${operations} ${b}`);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
       console.log("Correct!");
