@@ -12,7 +12,8 @@ const gamePrime = () => {
     let number = getRandomNumber();
     console.log(`Question: ${number}`);
     let correctAnswer;
-    if (number < 2) {
+   const isPrime = (number) =>{
+ if (number < 2) {
       correctAnswer = "no";
     }
     if (number === 2) {
@@ -23,14 +24,14 @@ const gamePrime = () => {
             correctAnswer = "no";
         }
     }
-    const yourAnswer = readlineSync.question("You answer: ");
+ correctAnswer = "yes";}
+isPrime(number);
+ const yourAnswer = readlineSync.question("You answer: ");
   if (yourAnswer === correctAnswer) {
     console.log("Correct!");
     attemptCounter += 1;
   } else {
-    console.log(
-      `'${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
-    );
+    console.log(`${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
     console.log(`Let's try again, ${username}!`);
     return;
   }
@@ -38,5 +39,6 @@ const gamePrime = () => {
   if (attemptCounter === 3) {
     console.log(`Congratulations, ${username}!`);
   }
-};
+}
+}
 export default gamePrime;
