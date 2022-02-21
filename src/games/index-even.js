@@ -11,7 +11,8 @@ const gameEven = () => {
     const number = getRandomNumber();
     console.log(`Question: ${number}`);
     const youAnswer = readlineSync.question('You answer: ');
-    if ((number % 2 === 0 && youAnswer === 'yes') || (number % 2 !== 0 && youAnswer === 'no')) {console.log('Correct!');
+    if ((number % 2 === 0 && youAnswer === 'yes') || (number % 2 !== 0 && youAnswer === 'no')) {
+      console.log('Correct!');
       attemptCounter += 1;
     }
     if (number % 2 !== 0 && youAnswer !== 'no') {
@@ -19,8 +20,8 @@ const gameEven = () => {
       console.log(`Let's try again, ${username}!`);
       return;
     }
-    if (number % 2 === 0 && youAnswer !== "yes") {
-      console.log(`${youAnswer} is wrong answer ;(. Correct answer was 'yes'.`)
+    if (number % 2 === 0 && youAnswer !== 'yes') {
+      console.log(`${youAnswer} is wrong answer ;(. Correct answer was 'yes'.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }

@@ -12,7 +12,7 @@ const gameGcd = () => {
     let number1 = getRandomNumber();
     let number2 = getRandomNumber();
     console.log(`Question: ${number1} ${number2}`);
-    const youAnswer = readlineSync.question("You answer: ");
+    const youAnswer = readlineSync.question('You answer: ');
     while (number1 !== number2) {
       if (number1 === 0 || number2 === 0) {
         number1 = 0;
@@ -26,7 +26,7 @@ const gameGcd = () => {
     }
     const gcd = number1;
     if (youAnswer === `${gcd}`) {
-      console.log("Correct!");
+      console.log('Correct!');
       attemptCounter += 1;
     } else {
       console.log(`${youAnswer} is wrong answer ;(. Correct answer was ${gcd}.`);
