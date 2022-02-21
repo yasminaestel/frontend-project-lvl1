@@ -19,8 +19,13 @@ const gameProgression = () => {
     let intermediateVariable = lineMassive[index-1] + difference;
     lineMassive.push( intermediateVariable );}
     let number = difference;
-    let answerRight = lineMassive[number];
-    lineMassive.splice(number, 1, "..");
+let answerRight;
+	if (number < lineMassive.length) {
+	 answerRight = lineMassive[number];
+	lineMassive.splice(number, 1, "..");}
+	else {answerRight = lineMassive[4];
+	lineMassive.splice(4, 1, "..");}
+
     lineMassive.join();
     console.log("Question: " + lineMassive);
     const youAnswer = readlineSync.question("You answer: ");
@@ -29,7 +34,7 @@ const gameProgression = () => {
       attemptCounter += 1;
     } else {
       console.log(
-        `'${youAnswer}' is wrong answer ;(. Correct answer was ${answerRight}.`
+        `${youAnswer} is wrong answer ;(. Correct answer was ${answerRight}.`
       );
       console.log(`Let's try again, ${username}!`);
       return;
