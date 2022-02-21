@@ -20,7 +20,7 @@ const gamePrime = () => {
       if (number % i === 0) {
         correctAnswer = "no";
       }
-    }
+    }  {
 
     correctAnswer = "yes";
   }
