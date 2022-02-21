@@ -1,7 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-
 import readlineSync from 'readline-sync';
-
 import startGames from '../startGames.js';
 
 startGames();
@@ -46,4 +44,5 @@ const gamePrime = () => {
     }
   }
 };
+
 export default gamePrime;
