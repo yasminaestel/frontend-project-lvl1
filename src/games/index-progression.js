@@ -25,7 +25,7 @@ const gameProgression = () => {
       answerRight = lineMassive[number];
       lineMassive.splice(number, 1, '..');
     } else {
-      number = number - 5;
+      number -= 5;
       answerRight = lineMassive[number];
       lineMassive.splice(number, 1, '..');
     }
