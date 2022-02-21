@@ -15,10 +15,10 @@ const gameCalc = () => {
     const operations = getRandomOperation();
     let numberAnswer;
     switch (operations) {
-      case "+":
+      case '+':
         numberAnswer = a + b;
         break;
-      case "-":
+      case '-':
         numberAnswer = a - b;
         break;
       default:
