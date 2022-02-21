@@ -29,17 +29,15 @@ if (youAnswer === correctAnswer) {
     console.log('Correct!');
     attemptCounter += 1;
   } else {
-    console.log(
-      `'${youAnswer}' is wrong answer ;(. Correct answer was ${correctAnswer}.`
-    );
+    console.log(`'${youAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
     console.log(`Let's try again, ${username}!`);
     return;
   }
-}
+
 
 if (attemptCounter === 3) {
   console.log(`Congratulations, ${username}!`);
 }
 };
 export default gamePrime;
-}
+
