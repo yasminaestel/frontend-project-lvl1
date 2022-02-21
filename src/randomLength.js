@@ -1,4 +1,4 @@
 const randomLength = () =>
-Math.floor((Math.random() * 11) + 5);
+Math.floor((Math.random() * 10) + 6);
 
 export default randomLength;
