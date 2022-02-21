@@ -13,7 +13,6 @@ let attemptCounter = 0;
     const a = getRandomNumber();
     const b = getRandomNumber();
     const operations = getRandomOperation();
-    const number = `${a} ${operations} ${b}`;
     let numberAnswer;
       switch (operations) {
         case '+':
@@ -26,7 +25,7 @@ let attemptCounter = 0;
           numberAnswer = a * b;
           break;
       }
-    console.log("Question:" + number);
+    console.log(`Question: a ${operations} b`);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${numberAnswer}`) {
       console.log("Correct!");
