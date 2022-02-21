@@ -24,7 +24,7 @@ const gameEven = () => {
       console.log(`Let's try again, ${username}!`);
       return;
     }
-  };
+  }
   if (attemptCounter === 3) {
     console.log(`Congratulations, ${username}!`);
   }

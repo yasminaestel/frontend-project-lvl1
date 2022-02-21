@@ -46,7 +46,7 @@ const gamePrime = () => {
     if (attemptCounter === 3) {
       console.log(`Congratulations, ${username}!`);
     }
-  };
+  }
 };
 
 export default gamePrime;
