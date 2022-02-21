@@ -1,13 +1,17 @@
-import getRandomNumber from "../getRandomNumber.js";
-import randomLength from "../randomLength.js";
-import randomDiff from "../randomDiff.js";
-import readlineSync from "readline-sync";
-import startGames from "../startGames.js";
+import getRandomNumber from '../getRandomNumber.js';
+
+import randomLength from '../randomLength.js';
+
+import randomDiff from '../randomDiff.js';
+
+import readlineSync from 'readline-sync';
+
+import startGames from '../startGames.js';
 
 startGames();
-const username = readlineSync.question("May I have your name? ");
+const username = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${username}!`);
-console.log("What number is missing in the progression?");
+console.log('What number is missing in the progression?');
 const gameProgression = () => {
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
@@ -23,16 +27,16 @@ const gameProgression = () => {
     let answerRight;
     if (number < lineMassive.length) {
       answerRight = lineMassive[number];
-      lineMassive.splice(number, 1, "..");
+      lineMassive.splice(number, 1, '..');
     } else {
       answerRight = lineMassive[4];
-      lineMassive.splice(4, 1, "..");
+      lineMassive.splice(4, 1, '..');
     }
-    const str = lineMassive.join(" ");
+    const str = lineMassive.join(' ');
     console.log(`Question: ${str}`);
-    const youAnswer = readlineSync.question("You answer: ");
+    const youAnswer = readlineSync.question('You answer: ');
     if (youAnswer === `${answerRight}`) {
-      console.log("Correct!");
+      console.log('Correct!');
       attemptCounter += 1;
     } else {
       console.log(
