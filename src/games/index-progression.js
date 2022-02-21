@@ -29,7 +29,7 @@ const gameProgression = () => {
       lineMassive.splice(4, 1, "..");
     }
     lineMassive.join();
-    console.log("Question: " + lineMassive);
+    console.log(`Question: ${lineMassive}`);
     const youAnswer = readlineSync.question("You answer: ");
     if (youAnswer === `${answerRight}`) {
       console.log("Correct!");
