@@ -16,16 +16,18 @@ const gameProgression = () => {
     let arrayLength = randomLength();
     let lineMassive = [firstIndex];
     for (let index = 1; index < arrayLength; index += 1) {
-    let intermediateVariable = lineMassive[index-1] + difference;
-    lineMassive.push( intermediateVariable );}
+      let intermediateVariable = lineMassive[index - 1] + difference;
+      lineMassive.push(intermediateVariable);
+    }
     let number = difference;
-let answerRight;
-	if (number < lineMassive.length) {
-	 answerRight = lineMassive[number];
-	lineMassive.splice(number, 1, "..");}
-	else {answerRight = lineMassive[4];
-	lineMassive.splice(4, 1, "..");}
-
+    let answerRight;
+    if (number < lineMassive.length) {
+      answerRight = lineMassive[number];
+      lineMassive.splice(number, 1, "..");
+    } else {
+      answerRight = lineMassive[4];
+      lineMassive.splice(4, 1, "..");
+    }
     lineMassive.join();
     console.log("Question: " + lineMassive);
     const youAnswer = readlineSync.question("You answer: ");
