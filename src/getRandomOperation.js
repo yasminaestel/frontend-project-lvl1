@@ -6,7 +6,7 @@ const getRandomOperator = () => {
   if (randomPercentage < 0.66) {
     return '-';
   }
-    return '*';
+  return '*';
 };
 
 export default getRandomOperator;
