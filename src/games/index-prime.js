@@ -3,7 +3,7 @@ import getRandomNumber from '../getRandomNumber.js';
 import startGames from '../startGames.js';
 
 startGames();
-const username = readlineSync.question("May I have your name? ");
+const username = readlineSync.question('May I have your name?');
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const gamePrime = () => {
@@ -21,8 +21,8 @@ const gamePrime = () => {
         correctAnswer = 'yes';
         return correctAnswer;
       }
-      for (let i = 2; i <= num / 2; i += 1) {
-        if (num % i === 0) {
+      for (let index = 2; index <= num / 2; index += 1) {
+        if (num % index === 0) {
           correctAnswer = 'no';
           return correctAnswer;
         }
@@ -36,9 +36,7 @@ const gamePrime = () => {
       console.log('Correct!');
       attemptCounter += 1;
     } else {
-      console.log(
-        `${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
-      );
+      console.log(`${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
