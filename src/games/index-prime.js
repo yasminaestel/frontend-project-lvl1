@@ -14,16 +14,16 @@ const gamePrime = () => {
     let correctAnswer;
     if (number < 2) {
       correctAnswer = "no";
-    }
+    } else {
 
     for (let i = 2; i <= number / 2; i += 1) {
       if (number % i === 0) {
         correctAnswer = "no";
-      }
-    }  {
+	break;
 
-    correctAnswer = "yes";
-  }
+    }
+}
+    correctAnswer = "yes";}
   const yourAnswer = readlineSync.question("You answer: ");
   if (yourAnswer === correctAnswer) {
     console.log("Correct!");
@@ -39,5 +39,6 @@ const gamePrime = () => {
   if (attemptCounter === 3) {
     console.log(`Congratulations, ${username}!`);
   }
-};
+}
+}
 export default gamePrime;
