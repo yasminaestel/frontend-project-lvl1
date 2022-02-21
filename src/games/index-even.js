@@ -1,4 +1,5 @@
 import getRandomNumber from "../getRandomNumber.js";
+
 import readlineSync from "readline-sync";
 
 
