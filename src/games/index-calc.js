@@ -1,12 +1,12 @@
-import getRandomNumber from "../getRandomNumber.js";
-import readlineSync from "readline-sync";
-import getRandomOperation from "../getRandomOperation.js";
-import startGames from "../startGames.js";
+import readlineSync from 'readline-sync';
+import getRandomNumber from '../getRandomNumber.js';
+import getRandomOperation from '../getRandomOperation.js';
+import startGames from '../startGames.js';
 
 startGames();
-const username = readlineSync.question("May I have your name?");
+const username = readlineSync.question('May I have your name?');
 console.log(`Hello, ${username}!`);
-console.log("What is the result of the expression?");
+console.log('What is the result of the expression?');
 const gameCalc = () => {
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
@@ -21,19 +21,17 @@ const gameCalc = () => {
       case "-":
         numberAnswer = a - b;
         break;
-      case "*":
+      default:
         numberAnswer = a * b;
         break;
     }
     console.log(`Question: ${a} ${operations} ${b}`);
-    const youAnswer = readlineSync.question("You answer: ");
+    const youAnswer = readlineSync.question('You answer: ');
     if (youAnswer === `${numberAnswer}`) {
-      console.log("Correct!");
+      console.log('Correct!');
       attemptCounter += 1;
     } else {
-      console.log(
-        `'${youAnswer}' is wrong answer ;(. Correct answer was ${numberAnswer}.`
-      );
+      console.log(`${youAnswer} is wrong answer ;(. Correct answer was ${numberAnswer}.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
