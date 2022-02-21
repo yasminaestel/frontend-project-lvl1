@@ -1,9 +1,6 @@
 import getRandomNumber from '../getRandomNumber.js';
-
 import readlineSync from 'readline-sync';
-
 import getRandomOperation from '../getRandomOperation.js';
-
 import startGames from '../startGames.js';
 
 startGames();
@@ -43,4 +40,5 @@ let attemptCounter = 0;
     console.log(`Congratulations, ${ username }!`);
     }
   }
+
 export default gameCalc;
