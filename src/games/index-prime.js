@@ -1,9 +1,11 @@
-import getRandomNumber from "../getRandomNumber.js";
-import readlineSync from "readline-sync";
-import startGames from "../startGames.js";
+import getRandomNumber from '../getRandomNumber.js';
+
+import readlineSync from 'readline-sync';
+
+import startGames from '../startGames.js';
 
 startGames();
-const username = readlineSync.question("May I have your name? ");
+const username = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${username}!`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const gamePrime = () => {
@@ -14,22 +16,22 @@ const gamePrime = () => {
     let correctAnswer;
     const isPrime = (number) => {
       if (number < 2) {
-        return (correctAnswer = "no");
+        return (correctAnswer = 'no');
       }
       if (number === 2) {
-        return (correctAnswer = "yes");
+        return (correctAnswer = 'yes');
       }
       for (let i = 2; i <= number / 2; i += 1) {
         if (number % i === 0) {
-          return (correctAnswer = "no");
+          return (correctAnswer = 'no');
         }
       }
-      return (correctAnswer = "yes");
+      return (correctAnswer = 'yes');
     };
     isPrime(number);
-    const yourAnswer = readlineSync.question("You answer: ");
+    const yourAnswer = readlineSync.question('You answer: ');
     if (yourAnswer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       attemptCounter += 1;
     } else {
       console.log(
