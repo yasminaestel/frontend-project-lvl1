@@ -1,11 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
-
 import randomLength from '../randomLength.js';
-
 import randomDiff from '../randomDiff.js';
-
 import readlineSync from 'readline-sync';
-
 import startGames from '../startGames.js';
 
 startGames();
@@ -50,4 +46,5 @@ const gameProgression = () => {
     console.log(`Congratulations, ${username}!`);
   }
 };
+
 export default gameProgression;
