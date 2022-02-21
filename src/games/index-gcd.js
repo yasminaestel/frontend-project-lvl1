@@ -1,7 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-
 import readlineSync from 'readline-sync';
-
 import startGames from '../startGames.js';
 
 startGames();
@@ -43,4 +41,5 @@ const gameGcd = () => {
     console.log(`Congratulations, ${username}!`);
   }
 };
+
 export default gameGcd;
