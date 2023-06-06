@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/yasminaestel/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/yasminaestel/frontend-project-lvl1/actions)",
+  "description": "Set of five simple math games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/yasminaestel/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Svetlana Khodak",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yasminaestel/frontend-project-lvl1/issues"
-  },
   "homepage": "https://github.com/yasminaestel/frontend-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
