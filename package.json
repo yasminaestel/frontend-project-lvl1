@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Set of five simple math games",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +12,9 @@
   },
   "author": "Svetlana Khodak",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasminaestel/frontend-project-lvl1/issues"
+  },
   "homepage": "https://github.com/yasminaestel/frontend-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
