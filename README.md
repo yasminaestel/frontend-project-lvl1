@@ -9,4 +9,16 @@ This is a console application, which is a set of five simple mathematical games.
 ![yasminaestel](https://github.com/yasminaestel/frontend-project-lvl1/actions/workflows/frontend-project-lvl1.yml/badge.svg)
 
 ## Game: "Parity check"
-[![asciicast](https://asciinema.org/a/ELwZuY7ME9YZJCrsLkJXX0u03.svg)](https://asciinema.org/a/ELwZuY7ME9YZJCrsLkJXX0u03)
+[![asciicast](https://asciinema.org/a/0xzPwg0pP3IfdV0Y8ErFAc7CA.svg)](https://asciinema.org/a/0xzPwg0pP3IfdV0Y8ErFAc7CA)
+
+## Game: "Calculator"
+[![asciicast](https://asciinema.org/a/9mNaoseg7vf7krQoanr6wqyDP.svg)](https://asciinema.org/a/9mNaoseg7vf7krQoanr6wqyDP)
+
+## Game: "Greatest common divisor"
+[![asciicast](https://asciinema.org/a/uXiVYm6MhdYmi9WYXMtYdGO9o.svg)](https://asciinema.org/a/uXiVYm6MhdYmi9WYXMtYdGO9o)
+
+## Game: "Arithmetic progression"
+[![asciicast](https://asciinema.org/a/L9KugO50bTEBELvIYa83loP9e.svg)](https://asciinema.org/a/L9KugO50bTEBELvIYa83loP9e)
+
+## Game: "Is it a prime number?"
+[![asciicast](https://asciinema.org/a/F2F6UFeLqw3hFbalp682HENde.svg)](https://asciinema.org/a/F2F6UFeLqw3hFbalp682HENde)
