@@ -10,25 +10,25 @@ const gameCalc = (name) => {
     const a = getRandomNumber();
     const b = getRandomNumber();
     const operation = getRandomOperation();
-    let rightAnswer;
+    let correctAnswer;
     switch (operation) {
       case '+':
-        rightAnswer = a + b;
+        correctAnswer = a + b;
         break;
       case '-':
-        rightAnswer = a - b;
+        correctAnswer = a - b;
         break;
       default:
-        rightAnswer = a * b;
+        correctAnswer = a * b;
         break;
     }
     console.log(`Question: ${a} ${operation} ${b}`);
-    const answer = readlineSync.question('You answer: ');
-    if (answer === `${rightAnswer}`) {
+    const answerUser = readlineSync.question('You answer: ');
+    if (answerUser === `${correctAnswer}`) {
       getPossitiveAnswer(name);
       attemptCounter += 1;
     } else {
-      getNegativeAnswer(answer, name);
+      getNegativeAnswer(answerUser, name, correctAnswer);
       return;
     }
   }

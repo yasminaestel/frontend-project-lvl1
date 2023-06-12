@@ -8,17 +8,19 @@ export default (name) => {
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
     console.log(`Question: ${number}`);
-    const answer = readlineSync.question('You answer: ');
-    if ((number % 2 === 0 && answer === 'yes') || (number % 2 !== 0 && answer === 'no')) {
+    const answerUser = readlineSync.question('You answer: ');
+    if ((number % 2 === 0 && answerUser === 'yes') || (number % 2 !== 0 && answerUser === 'no')) {
       getPossitiveAnswer(name);
       attemptCounter += 1;
     }
-    if (number % 2 !== 0 && answer !== 'no') {
-      getNegativeAnswer(answer, name);
+    if (number % 2 !== 0 && answerUser !== 'no') {
+      const correctAnswer = 'no';
+      getNegativeAnswer(answerUser, name, correctAnswer);
       return;
     }
-    if (number % 2 === 0 && answer !== 'yes') {
-      getNegativeAnswer(answer, name);
+    if (number % 2 === 0 && answerUser !== 'yes') {
+      const correctAnswer = 'yes';
+      getNegativeAnswer(answerUser, name, correctAnswer);
       return;
     }
   }

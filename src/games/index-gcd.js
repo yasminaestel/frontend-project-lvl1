@@ -1,18 +1,15 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
-import startGames from '../startGames.js';
+import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-startGames();
-const username = readlineSync.question('May I have your name?');
-console.log(`Hello, ${username}!`);
-console.log('Find the greatest common divisor of given numbers.');
-const gameGcd = () => {
+const gameGcd = (name) => {
+  console.log('Find the greatest common divisor of given numbers.');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     let number1 = getRandomNumber();
     let number2 = getRandomNumber();
     console.log(`Question: ${number1} ${number2}`);
-    const youAnswer = readlineSync.question('You answer: ');
+    const answerUser = readlineSync.question('You answer: ');
     while (number1 !== number2) {
       if (number1 === 0 || number2 === 0) {
         number1 = 0;
@@ -25,18 +22,17 @@ const gameGcd = () => {
       }
     }
     const gcd = number1;
-    if (youAnswer === `${gcd}`) {
-      console.log('Correct!');
+    if (answerUser === `${gcd}`) {
+      getPossitiveAnswer(name);
       attemptCounter += 1;
     } else {
-      console.log(`${youAnswer} is wrong answer ;(. Correct answer was ${gcd}.`);
-      console.log(`Let's try again, ${username}!`);
+      getNegativeAnswer(answerUser, name, gcd);
       return;
     }
   }
 
   if (attemptCounter === 3) {
-    console.log(`Congratulations, ${username}!`);
+    endGame(name);
   }
 };
 
