@@ -1,43 +1,39 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
 import getRandomOperation from '../getRandomOperation.js';
-import startGames from '../startGames.js';
+import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-startGames();
-const username = readlineSync.question('May I have your name?');
-console.log(`Hello, ${username}!`);
-console.log('What is the result of the expression?');
-const gameCalc = () => {
+const gameCalc = (name) => {
+  console.log('What is the result of the expression?');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     const a = getRandomNumber();
     const b = getRandomNumber();
-    const operations = getRandomOperation();
-    let numberAnswer;
-    switch (operations) {
+    const operation = getRandomOperation();
+    let rightAnswer;
+    switch (operation) {
       case '+':
-        numberAnswer = a + b;
+        rightAnswer = a + b;
         break;
       case '-':
-        numberAnswer = a - b;
+        rightAnswer = a - b;
         break;
       default:
-        numberAnswer = a * b;
+        rightAnswer = a * b;
         break;
     }
-    console.log(`Question: ${a} ${operations} ${b}`);
-    const youAnswer = readlineSync.question('You answer: ');
-    if (youAnswer === `${numberAnswer}`) {
-      console.log('Correct!');
+    console.log(`Question: ${a} ${operation} ${b}`);
+    const answer = readlineSync.question('You answer: ');
+    if (answer === `${rightAnswer}`) {
+      getPossitiveAnswer(name);
       attemptCounter += 1;
     } else {
-      console.log(`${youAnswer} is wrong answer ;(. Correct answer was ${numberAnswer}.`);
-      console.log(`Let's try again, ${username}!`);
+      getNegativeAnswer(answer, name);
       return;
     }
   }
   if (attemptCounter === 3) {
-    console.log(`Congratulations, ${username}!`);
+    endGame(name);
   }
 };
 

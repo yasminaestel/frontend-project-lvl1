@@ -1,6 +1,4 @@
-const startGames = () => {
-  console.log('Welcome to the Brain Games!');
-};
+const startGames = () => console.log('Welcome to the Brain Games!');
 
 const getNegativeAnswer = (answer, userName) => {
   console.log(`${answer} is wrong answer ;(. Correct answer was 'no'.`);

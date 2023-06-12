@@ -1,15 +1,9 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
-import { startGames, getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
-import username from '../getName.js';
+import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-startGames();
-const name = username();
-
-
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-export default () => {
+export default (name) => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
