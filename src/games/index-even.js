@@ -16,7 +16,7 @@ export default (name) => {
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('You answer: ');
 
-    if (userAnswer === correctAnswer) {
+    if (userAnswer.toLowerCase() === correctAnswer) {
       getPossitiveAnswer(name);
     } else {
       getNegativeAnswer(userAnswer, name, correctAnswer);
