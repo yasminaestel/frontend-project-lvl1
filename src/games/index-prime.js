@@ -1,12 +1,9 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
-import startGames from '../startGames.js';
+import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-startGames();
-const username = readlineSync.question('May I have your name?');
-console.log(`Hello, ${username}!`);
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-const gamePrime = () => {
+export default (name) => {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
@@ -31,20 +28,17 @@ const gamePrime = () => {
       return correctAnswer;
     };
     isPrime(number);
-    const yourAnswer = readlineSync.question('You answer: ');
-    if (yourAnswer === correctAnswer) {
-      console.log('Correct!');
+    const answerUser = readlineSync.question('You answer: ');
+    if (answerUser === correctAnswer) {
+      getPossitiveAnswer(name);
       attemptCounter += 1;
     } else {
-      console.log(`${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-      console.log(`Let's try again, ${username}!`);
+      getNegativeAnswer(answerUser, name, correctAnswer);
       return;
     }
 
     if (attemptCounter === 3) {
-      console.log(`Congratulations, ${username}!`);
+      endGame(name);
     }
   }
 };
-
-export default gamePrime;

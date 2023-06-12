@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
 import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-const gameGcd = (name) => {
+export default (name) => {
   console.log('Find the greatest common divisor of given numbers.');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
@@ -35,5 +35,3 @@ const gameGcd = (name) => {
     endGame(name);
   }
 };
-
-export default gameGcd;

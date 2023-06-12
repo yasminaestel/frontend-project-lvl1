@@ -3,7 +3,7 @@ import getRandomNumber from '../getRandomNumber.js';
 import getRandomOperation from '../getRandomOperation.js';
 import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
-const gameCalc = (name) => {
+export default (name) => {
   console.log('What is the result of the expression?');
   let attemptCounter = 0;
   for (let i = 1; i <= 3; i += 1) {
@@ -36,5 +36,3 @@ const gameCalc = (name) => {
     endGame(name);
   }
 };
-
-export default gameCalc;
