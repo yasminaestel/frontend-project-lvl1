@@ -4,10 +4,11 @@ import getRandomLength from '../getRandomLength.js';
 import getRandomDiff from '../getRandomDiff.js';
 import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
+const attemptСounter = 3;
+
 export default (name) => {
   console.log('What number is missing in the progression?');
-  let attemptCounter = 0;
-  for (let i = 1; i <= 3; i += 1) {
+  for (let i = 0; i < attemptСounter; i += 1) {
     const firstIndex = getRandomNumber();
     const difference = getRandomDiff();
     const arrayLength = getRandomLength();
@@ -28,16 +29,13 @@ export default (name) => {
     }
     const str = lineMassive.join(' ');
     console.log(`Question: ${str}`);
-    const answerUser = readlineSync.question('You answer: ');
-    if (answerUser === `${correctAnswer}`) {
+    const userAnswer = readlineSync.question('You answer: ');
+    if (userAnswer === `${correctAnswer}`) {
       getPossitiveAnswer(name);
-      attemptCounter += 1;
     } else {
-      getNegativeAnswer(answerUser, name, correctAnswer);
+      getNegativeAnswer(userAnswer, name, correctAnswer);
       return;
     }
   }
-  if (attemptCounter === 3) {
-    endGame(name);
-  }
+  endGame(name);
 };

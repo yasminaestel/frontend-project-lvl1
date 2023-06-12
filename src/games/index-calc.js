@@ -3,36 +3,38 @@ import getRandomNumber from '../getRandomNumber.js';
 import getRandomOperation from '../getRandomOperation.js';
 import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
+const attemptСounter = 3;
+
+const calculate = (a, b, operation) => {
+  switch (operation) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    default:
+      return a * b;
+  }
+};
+
 export default (name) => {
   console.log('What is the result of the expression?');
-  let attemptCounter = 0;
-  for (let i = 1; i <= 3; i += 1) {
+
+  for (let i = 0; i < attemptСounter; i += 1) {
     const a = getRandomNumber();
     const b = getRandomNumber();
     const operation = getRandomOperation();
-    let correctAnswer;
-    switch (operation) {
-      case '+':
-        correctAnswer = a + b;
-        break;
-      case '-':
-        correctAnswer = a - b;
-        break;
-      default:
-        correctAnswer = a * b;
-        break;
-    }
+    const correctAnswer = calculate(a, b, operation);
+
     console.log(`Question: ${a} ${operation} ${b}`);
-    const answerUser = readlineSync.question('You answer: ');
-    if (answerUser === `${correctAnswer}`) {
+    const userAnswer = readlineSync.question('You answer: ');
+
+    if (userAnswer === `${correctAnswer}`) {
       getPossitiveAnswer(name);
-      attemptCounter += 1;
     } else {
-      getNegativeAnswer(answerUser, name, correctAnswer);
+      getNegativeAnswer(userAnswer, name, correctAnswer);
       return;
     }
   }
-  if (attemptCounter === 3) {
-    endGame(name);
-  }
+
+  endGame(name);
 };

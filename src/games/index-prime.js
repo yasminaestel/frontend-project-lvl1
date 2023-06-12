@@ -2,43 +2,34 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../getRandomNumber.js';
 import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
 
+const attemptСounter = 3;
+
+const isPrime = (num) => {
+  if (num <= 1) return false;
+  if (num === 2) return true;
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+
 export default (name) => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  let attemptCounter = 0;
-  for (let i = 1; i <= 3; i += 1) {
+
+  for (let i = 0; i < attemptСounter; i += 1) {
     const number = getRandomNumber();
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
+
     console.log(`Question: ${number}`);
-    let correctAnswer;
-    const isPrime = (num) => {
-      if (num < 2) {
-        correctAnswer = 'no';
-        return correctAnswer;
-      }
-      if (num === 2) {
-        correctAnswer = 'yes';
-        return correctAnswer;
-      }
-      for (let index = 2; index <= num / 2; index += 1) {
-        if (num % index === 0) {
-          correctAnswer = 'no';
-          return correctAnswer;
-        }
-      }
-      correctAnswer = 'yes';
-      return correctAnswer;
-    };
-    isPrime(number);
-    const answerUser = readlineSync.question('You answer: ');
-    if (answerUser === correctAnswer) {
+    const userAnswer = readlineSync.question('You answer: ');
+
+    if (userAnswer === correctAnswer) {
       getPossitiveAnswer(name);
-      attemptCounter += 1;
     } else {
-      getNegativeAnswer(answerUser, name, correctAnswer);
+      getNegativeAnswer(userAnswer, name, correctAnswer);
       return;
     }
-
-    if (attemptCounter === 3) {
-      endGame(name);
-    }
   }
+
+  endGame(name);
 };
