@@ -1,9 +1,5 @@
-import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js';
-import getRandomOperation from '../getRandomOperation.js';
-import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
-
-const attemptСounter = 3;
+import gameLogic from '../index.js';
+import { getRandom, getRandomOperation } from '../utilis.js';
 
 const calculate = (a, b, operation) => {
   switch (operation) {
@@ -16,25 +12,18 @@ const calculate = (a, b, operation) => {
   }
 };
 
-export default (name) => {
-  console.log('What is the result of the expression?');
+export default () => {
+  const rules = 'What is the result of the expression?';
 
-  for (let i = 0; i < attemptСounter; i += 1) {
-    const a = getRandomNumber();
-    const b = getRandomNumber();
+  const functionGames = () => {
+    const a = getRandom(101, 0);
+    const b = getRandom(101, 0);
     const operation = getRandomOperation();
     const correctAnswer = calculate(a, b, operation);
 
-    console.log(`Question: ${a} ${operation} ${b}`);
-    const userAnswer = readlineSync.question('You answer: ');
+    const question = `${a} ${operation} ${b}`;
 
-    if (userAnswer === `${correctAnswer}`) {
-      getPossitiveAnswer(name);
-    } else {
-      getNegativeAnswer(userAnswer, name, correctAnswer);
-      return;
-    }
-  }
-
-  endGame(name);
+    return [question, correctAnswer.toString()];
+  };
+  gameLogic(rules, functionGames);
 };
