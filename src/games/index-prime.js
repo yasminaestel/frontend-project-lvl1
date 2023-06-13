@@ -1,8 +1,5 @@
-import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js';
-import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
-
-const attemptСounter = 3;
+import gameLogic from '../index.js';
+import { getRandom } from '../utilis.js';
 
 const isPrime = (num) => {
   if (num <= 1) return false;
@@ -13,23 +10,15 @@ const isPrime = (num) => {
   return true;
 };
 
-export default (name) => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+export default () => {
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  for (let i = 0; i < attemptСounter; i += 1) {
-    const number = getRandomNumber();
+  const functionGame = () => {
+    const number = getRandom(101, 0);
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('You answer: ');
-
-    if (userAnswer.toLowerCase() === correctAnswer) {
-      getPossitiveAnswer(name);
-    } else {
-      getNegativeAnswer(userAnswer, name, correctAnswer);
-      return;
-    }
-  }
-
-  endGame(name);
+    const question = `${number}`;
+    return [question, correctAnswer];
+  };
+  gameLogic(rules, functionGame);
 };
