@@ -15,7 +15,7 @@ const calculate = (a, b, operation) => {
 export default () => {
   const rules = 'What is the result of the expression?';
 
-  const functionGame = () => {
+  const functionGameCalc = () => {
     const a = getRandom(101, 0);
     const b = getRandom(101, 0);
     const operation = getRandomOperation();
@@ -25,5 +25,5 @@ export default () => {
 
     return [question, correctAnswer.toString()];
   };
-  gameLogic(rules, functionGame);
+  gameLogic(rules, functionGameCalc);
 };

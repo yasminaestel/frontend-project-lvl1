@@ -3,7 +3,7 @@ import { getRandom } from '../utilis.js';
 
 export default () => {
   const rules = 'What number is missing in the progression?';
-  const functionGame = () => {
+  const functionGameProgression = () => {
     const firstIndex = getRandom(101, 0);
     const difference = getRandom(10, 1);
     const arrayLength = getRandom(6, 6);
@@ -25,5 +25,5 @@ export default () => {
     const question = `${lineMassive.join(' ')}`;
     return [question, correctAnswer.toString()];
   };
-  gameLogic(rules, functionGame);
+  gameLogic(rules, functionGameProgression);
 };
