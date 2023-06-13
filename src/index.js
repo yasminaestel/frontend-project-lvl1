@@ -11,7 +11,7 @@ export default (rules, functionGame) => {
     const [question, correctAnswer] = functionGame();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('You answer: ');
-    if (userAnswer === correctAnswer) {
+    if (userAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
