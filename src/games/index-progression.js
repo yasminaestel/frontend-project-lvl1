@@ -1,17 +1,12 @@
-import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js';
-import getRandomLength from '../getRandomLength.js';
-import getRandomDiff from '../getRandomDiff.js';
-import { getNegativeAnswer, getPossitiveAnswer, endGame } from '../communicateWithUser.js';
+import gameLogic from '../index.js';
+import { getRandom } from '../utilis.js';
 
-const attemptСounter = 3;
-
-export default (name) => {
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < attemptСounter; i += 1) {
-    const firstIndex = getRandomNumber();
-    const difference = getRandomDiff();
-    const arrayLength = getRandomLength();
+export default () => {
+  const rules = 'What number is missing in the progression?';
+  const functionGame = () => {
+    const firstIndex = getRandom(101, 0);
+    const difference = getRandom(10, 1);
+    const arrayLength = getRandom(6, 6);
     const lineMassive = [firstIndex];
     for (let index = 1; index < arrayLength; index += 1) {
       const intermediateVariable = lineMassive[index - 1] + difference;
@@ -27,15 +22,8 @@ export default (name) => {
       correctAnswer = lineMassive[number];
       lineMassive.splice(number, 1, '..');
     }
-    const str = lineMassive.join(' ');
-    console.log(`Question: ${str}`);
-    const userAnswer = readlineSync.question('You answer: ');
-    if (userAnswer === `${correctAnswer}`) {
-      getPossitiveAnswer(name);
-    } else {
-      getNegativeAnswer(userAnswer, name, correctAnswer);
-      return;
-    }
-  }
-  endGame(name);
+    const question = `${lineMassive.join(' ')}`;
+    return [question, correctAnswer.toString()];
+  };
+  gameLogic(rules, functionGame);
 };
