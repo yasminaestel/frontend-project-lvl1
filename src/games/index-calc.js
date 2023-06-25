@@ -1,5 +1,7 @@
 import gameLogic from '../index.js';
-import { getRandom, getRandomOperation } from '../utilis.js';
+import getRandom from '../utilis.js';
+
+const operators = ['+', '-', '*'];
 
 const calculate = (a, b, operation) => {
   switch (operation) {
@@ -12,18 +14,17 @@ const calculate = (a, b, operation) => {
   }
 };
 
+export const getRoundGameCalc = () => {
+  const a = getRandom(101, 0);
+  const b = getRandom(101, 0);
+  const operation = operators[Math.floor(Math.random() * operators.length)];
+  const correctAnswer = calculate(a, b, operation);
+
+  const question = `${a} ${operation} ${b}`;
+  return [question, correctAnswer.toString()];
+};
+
 export default () => {
   const rules = 'What is the result of the expression?';
-
-  const functionGameCalc = () => {
-    const a = getRandom(101, 0);
-    const b = getRandom(101, 0);
-    const operation = getRandomOperation();
-    const correctAnswer = calculate(a, b, operation);
-
-    const question = `${a} ${operation} ${b}`;
-
-    return [question, correctAnswer.toString()];
-  };
-  gameLogic(rules, functionGameCalc);
+  gameLogic(rules, getRoundGameCalc);
 };
