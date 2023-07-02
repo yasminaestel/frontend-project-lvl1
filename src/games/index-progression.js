@@ -16,15 +16,15 @@ export const getRoundGameProgression = () => {
   const arrayLength = getRandom(4, 12);
   const progression = generateProgression(firstIndex, difference, arrayLength);
 
-  let number = difference;
+  let hiddenNumberIndex = getRandom(1, progression.length - 1);
   let correctAnswer;
-  if (number < progression.length) {
-    correctAnswer = progression[number];
-    progression.splice(number, 1, '..');
+  if (hiddenNumberIndex < progression.length) {
+    correctAnswer = progression[hiddenNumberIndex];
+    progression.splice(hiddenNumberIndex, 1, '..');
   } else {
-    number -= 5;
-    correctAnswer = progression[number];
-    progression.splice(number, 1, '..');
+    hiddenNumberIndex -= 5;
+    correctAnswer = progression[hiddenNumberIndex];
+    progression.splice(hiddenNumberIndex, 1, '..');
   }
 
   const question = `${progression.join(' ')}`;
