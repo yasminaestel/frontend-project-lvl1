@@ -14,20 +14,20 @@ export const getRoundGameProgression = () => {
   const firstIndex = getRandom(0, 101);
   const difference = getRandom(1, 10);
   const arrayLength = getRandom(4, 12);
-  const lineMassive = generateProgression(firstIndex, difference, arrayLength);
+  const progression = generateProgression(firstIndex, difference, arrayLength);
 
   let number = difference;
   let correctAnswer;
-  if (number < lineMassive.length) {
-    correctAnswer = lineMassive[number];
-    lineMassive.splice(number, 1, '..');
+  if (number < progression.length) {
+    correctAnswer = progression[number];
+    progression.splice(number, 1, '..');
   } else {
     number -= 5;
-    correctAnswer = lineMassive[number];
-    lineMassive.splice(number, 1, '..');
+    correctAnswer = progression[number];
+    progression.splice(number, 1, '..');
   }
 
-  const question = `${lineMassive.join(' ')}`;
+  const question = `${progression.join(' ')}`;
   return [question, correctAnswer.toString()];
 };
 
