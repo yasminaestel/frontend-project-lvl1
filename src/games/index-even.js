@@ -4,7 +4,7 @@ import getRandom from '../utilis.js';
 const isEven = (number) => number % 2 === 0;
 
 export const getRoundGameEven = () => {
-  const number = getRandom(101, 0);
+  const number = getRandom(0, 101);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
 
   const question = `${number}`;

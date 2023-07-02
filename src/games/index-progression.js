@@ -11,9 +11,9 @@ const generateProgression = (firstIndex, difference, arrayLength) => {
 };
 
 export const getRoundGameProgression = () => {
-  const firstIndex = getRandom(101, 0);
-  const difference = getRandom(10, 1);
-  const arrayLength = getRandom(6, 6);
+  const firstIndex = getRandom(0, 101);
+  const difference = getRandom(1, 10);
+  const arrayLength = getRandom(4, 12);
   const lineMassive = generateProgression(firstIndex, difference, arrayLength);
 
   let number = difference;

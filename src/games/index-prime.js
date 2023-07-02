@@ -10,7 +10,7 @@ const isPrime = (num) => {
 };
 
 export const getRoundGamePrime = () => {
-  const number = getRandom(101, 0);
+  const number = getRandom(0, 101);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   const question = `${number}`;

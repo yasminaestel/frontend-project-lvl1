@@ -15,8 +15,8 @@ const calculate = (a, b, operation) => {
 };
 
 export const getRoundGameCalc = () => {
-  const a = getRandom(101, 0);
-  const b = getRandom(101, 0);
+  const a = getRandom(0, 101);
+  const b = getRandom(0, 101);
   const operation = operators[Math.floor(Math.random() * operators.length)];
   const correctAnswer = calculate(a, b, operation);
 
