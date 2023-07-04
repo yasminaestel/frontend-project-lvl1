@@ -1,26 +1,31 @@
 import gameLogic from '../index.js';
 import getRandom from '../utilis.js';
 
-const operators = ['+', '-', '*'];
-
-const calculate = (a, b, operation) => {
-  switch (operation) {
-    case '+':
-      return a + b;
-    case '-':
-      return a - b;
-    default:
-      return a * b;
-  }
-};
-
 export const getRoundGameCalc = () => {
-  const a = getRandom(0, 101);
-  const b = getRandom(0, 101);
-  const operation = operators[Math.floor(Math.random() * operators.length)];
-  const correctAnswer = calculate(a, b, operation);
+  const firstNumber = getRandom(1, 10);
+  const secondNumber = getRandom(1, 10);
+  const operatorNumber = getRandom(1, 3);
+  let operator;
+  let correctAnswer;
 
-  const question = `${a} ${operation} ${b}`;
+  switch (operatorNumber) {
+    case 1:
+      operator = '+';
+      correctAnswer = firstNumber + secondNumber;
+      break;
+    case 2:
+      operator = '-';
+      correctAnswer = firstNumber - secondNumber;
+      break;
+    case 3:
+      operator = '*';
+      correctAnswer = firstNumber * secondNumber;
+      break;
+    default:
+      break;
+  }
+
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
   return [question, correctAnswer.toString()];
 };
 
